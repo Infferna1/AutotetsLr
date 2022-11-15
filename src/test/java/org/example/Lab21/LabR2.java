@@ -63,7 +63,7 @@ public class LabR2 {
         given().body(body).post(PET).then().statusCode(HttpStatus.SC_OK);
     }
 
-    @Test(dependsOnMethods = "verifyGetAction")
+    @Test(dependsOnMethods = "verifyPutAction")
     public void verifyDeleteAction() {
         given().pathParam("petId", Integer.valueOf("1")).delete(PET_ID)
                 .then()
